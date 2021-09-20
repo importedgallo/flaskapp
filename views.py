@@ -7,12 +7,10 @@ views = Blueprint(__name__, "views")
 def home():
     return render_template("index.html", name="andre", age=21)
 
-# query parameters
+# render profile.html
 @views.route("/profile")
 def profile():
-    args = request.args
-    name = args.get('name')
-    return render_template("index.html", name=name)
+    return render_template("profile.html")
 
 # return json data
 @views.route("/json")

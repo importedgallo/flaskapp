@@ -7,8 +7,11 @@
     <title>Home</title>
 </head>
 <body>
-    <div><h1>Home Page</h1>
+    <div>
+    {% block content %}
+    <h1>Home Page</h1>
     <p>Hello, {{ name }}!</p>
+    {% endblock %}
     </div>
 
 
